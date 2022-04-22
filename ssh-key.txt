@@ -1,0 +1,16 @@
+git init
+git status
+git config -- global.username "ajeet"
+git config -- global.useremail "ajeet202204@dei.ac.in"
+
+ssh-keygen -t rsa 4096 -C "ajeet202204@dei.ac.in"
+y
+skip
+skip
+
+eval $(ssh-agent -s)
+ssh-add ~/ .ssh/id_rsa
+
+clip < ~/.ssh/id_rsa.pub
+
+now paste the key in shh key
